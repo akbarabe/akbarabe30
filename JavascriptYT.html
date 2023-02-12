@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaScript</title>
+</head>
+<body>
+<script>
+    //awal
+    document.writeln("Hello World");
+
+    //komentar
+    document.writeln("<p>Komentar</p>");
+    //Komentar satu baris
+    //komentar satu baris bisa langsung ke semua
+    //tinggal di block yang mau dijadikan komentar
+    //lalu pencet ctrl + /
+
+    /*
+    Komentar
+    lebih dari
+    1 baris
+    */
+
+    //  tipeDataNumber (defaultnya basis 10)
+    document.writeln( 100 );//buat bilangat bulat
+    document.writeln("</br>");//break
+    document.writeln( 100.30 );//buat bilangan desimal pake titik(.)
+
+    document.writeln("</br>");
+    document.writeln( 0b101011 );//buat binary diawali 0b
+    document.writeln("</br>");
+    document.writeln( 0xabe );//buat hexadesimal diawali 0x
+    document.writeln("</br>");
+    document.writeln( 0o130 );//buat octal diawali 0o
+    
+    document.writeln("</br>");
+    document.writeln("</br>");
+
+    //  tipeDataBoolean
+    document.writeln(true);
+    document.writeln("</br>");
+    document.writeln(false);
+
+    document.writeln("</br>");
+    document.writeln("</br>");
+
+    //  tipeDataString
+    document.writeln("Akbarabe");
+    document.writeln("</br>");
+    document.writeln("Cisbar30");
+    document.writeln("</br>");
+    document.writeln("Nama : " + "Akbar " + "Hidayat"); //menambah string
+    document.writeln("</br>");
+    document.writeln("Panggilan : " + "Abe");
+
+    document.writeln("</br>");
+    document.writeln("</br>");
+
+    //  escapeSequence
+    document.writeln("<textarea cols='50' rows'50'>");//writeln untuk ada enter otomatis
+    document.write("Akbar \nHidayat\n"); // \n untuk enter
+    document.writeln("\\rumah"); // \\untuk garis miring (\)
+    document.writeln("\"cisituBaru\""); // \" untuk nambahin kutip dua
+    document.writeln("\'nomor 30\'"); // \' untuk menambahkan kutip satu
+    document.writeln("</textarea>");
+
+    document.writeln("</br>");
+    document.writeln("</br>");
+
+    //  variable
+    // var firstName = "Akbar"; //bisa langsung diberi nilai setelah deklarasi
+    // var lastName = "Hidayat";
+    // var fullName = "Akbar Hidayat";
+
+    //variabel bisa diubah-ubah tanpa ada batas
+    //data terakhir diubah, data yang akan muncul
+
+    // bisa juga diberi nilai nanti
+    // firstName = "Akbar";
+    // firstName = "abe"; 
+    // lastName = "Hidayat";
+    // fullName = "Akbar Hidayat";
+
+    // document.writeln(fullName);
+    // document.writeln("</br>");
+    // document.writeln(firstName); 
+    // document.writeln(lastName);
+
+    // document.writeln("</br>");
+    // document.writeln("</br>");
+
+    //  !!!
+    //  katanya sih mending pake let dan const daripada pake var
+
+    //  letDanConst
+    //  let bisa dirubah rubah
+    //  const (constant) isinya gk bisa dirubah
+    let firstName = "Akbar"; 
+    let lastName = "Hidayat";
+    let fullName = "Akbar Hidayat";
+    const otodidak = "Paksa belajar javascript";
+
+    //  otodidak = "males belajar" -> error
+    
+    document.writeln(otodidak);
+    document.writeln("</br>");
+
+    document.writeln(fullName);
+    document.writeln("</br>");
+    document.writeln(firstName); 
+    document.writeln(lastName);
+
+    document.writeln("</br>");
+    document.writeln("</br>");
+
+    //  operatorAritmatika
+    let result = 1 + 2; //3
+    document.writeln("<p> 1 + 2 = " + result + "</p");
+    let originaResult = result;
+
+    result = result - 1; //2
+    document.writeln("<p>" + originaResult + " - 1 = " + result + "</p>");
+    originaResult = result;
+
+    result = result * 2; //4
+    document.writeln("<p>" + originaResult + " * 2 = " + result + "</p>");
+    originaResult = result;
+
+    //  operatorAugmentedAssignment
+    let hasil = 1 + 2; //3
+    document.writeln("<p> 1 + 2 = " + hasil + "</p");
+    let hasilAwal = hasil;
+
+    hasil -= 1; //2
+    document.writeln("<p>" + hasilAwal + " - 1 = " + hasil + "</p>");
+    hasilAwal = hasil;
+
+    hasil *= 2; //4
+    document.writeln("<p>" + hasilAwal + " * 2 = " + hasil + "</p>");
+    hasilAwal = hasil;
+
+    //  operatorUnary
+    let jawaban = +1; //bilangan positif sama aja kek 1
+    document.writeln("<p>" + jawaban + "</p>");
+
+    jawaban--; // jawaban = jawaban - 1 -> 0
+    document.writeln("<p>" + jawaban + "</p>");
+
+    jawaban++; //jawaban = jawaban + 1 -> 1
+    document.writeln("<p>" + jawaban + "</p>");
+
+    jawaban = -jawaban //-1
+    document.writeln("<p>" + jawaban + "</p>");
+
+    //  operatorPerbandingan
+    let banding = 5 == "5"; //true
+    document.writeln("<p>" + banding + "</p>");
+
+    banding = 5 === "5"; //false
+    document.writeln("<p>" + banding + "</p>");
+
+    banding = 5 > 10; //false
+    document.writeln("<p>" + banding + "</p>");
+
+    banding = 5 < 10; //true
+    document.writeln("<p>" + banding + "</p>");
+
+    document.writeln("</br>");
+    document.writeln("</br>");
+
+    //operatorLogika
+    const nilaiUjian = 80;
+    const nilaiAbsen = 70;
+
+    const lulusUjian = nilaiUjian > 75;
+    document.writeln("<p>" + lulusUjian + "</p>");
+    const lulusAbsen = nilaiAbsen > 75;
+    document.writeln("<p>" + lulusAbsen + "</p>");
+
+    const lulus = lulusUjian && lulusAbsen;
+    document.writeln("<p>" + lulus + "</p>");
+    
+    // && defaultnya false kecuali kiri dan kanan true
+    // || defaultnya true kecuali kiri dan kanan false
+    // ! kebalikan dari nilainya
+
+    //console
+    // liatnya di browser klik kanan + inspect trs di console
+
+    console.debug("Hello World");// debug tidak diperlihatkan tapi bisa dilihat juga
+    // lewat level nanti ceklis verbose, gk diperlihatkan karena bisa memperlambat kerja aplikasi
+
+    console.info("Hello World");// bisa ditulis juga console.log
+
+    console.warn("Ini peringatan");
+
+    console.error("Ini error");
+
+    //  stringTemplate
+    const name = "Akbar Hidayat";
+    const namaAwal = "Akbar";
+    const namaAkhir = "Hidayat";
+    const template = `Name : ${namaAwal} ${namaAkhir} ${name}`; //backtick (`)
+
+    console.info(template);
+    
+    const nilai = 90;
+    const template2 =`Name : ${name}, lulus : ${nilai > 70}`;
+
+    console.info(template2);
+
+    const multiline = `Nama saya akbar
+    biasa dipanggil abe, saya suka tidur
+    dan salah ngambil jurusan RPL..`;
+
+    document.writeln("<pre>");
+    document.writeln(multiline);
+    document.writeln("<pre>");
+
+    
+    //  Konversi String dan Number
+    const value1 = parseInt("1");
+    const value2 = 1;
+    const sum = value1 + value2;
+
+    document.writeln(`<p>${sum}</p>`);
+
+    document.writeln(`<p>${parseInt("1.1")}</p>`);
+    document.writeln(`<p>${parseFloat("1.1")}</p>`);
+    document.writeln(`<p>${Number("1.1")}</p>`);
+
+    const a = 1;
+    const b = 1;
+    const total = a.toString() + b.toString();
+    document.writeln(`<p>${total}</p>`);
+
+    /*  parseInt(string)    -> mengkonversi dari string ke number (bilangan bulat)
+        parseFloat(String)  -> Mengkonversi dari string ke number (bilangan pecahan)
+        Number(String)      -> mengkonversi dari string ke number (bilangan bulat/pecahan)
+        Number.toString()   -> Mengkonversi dari number ke string 
+    */
+
+    //  NaN (Not a Number)
+    document.writeln(`<p>${parseInt("Salah")}</p>`);
+    document.writeln(`<p>${parseInt("1Salah")}</p>`);
+    document.writeln(`<p>${parseFloat("1.3Abe")}</p>`);
+    document.writeln(`<p>${parseInt("Abe.1")}</p>`);
+    /*  Khusus untuk parseInt dan parseFloat jika salahnya ada di bagian depan
+    maka akan ditolerir jika di belakang maka akan disalahkan
+    */
+    document.writeln(`<p>${Number("1Salah")}</p>`);
+    document.writeln(`<p>${Number("1.1Salah")}</p>`);
+    document.writeln(`<p>${Number("Salah")}</p>`);
+
+    //  Operasi pada NaN (tidak bisa)
+    const nan1 = Number("Salah"); //NaN
+    const bukanNaN = 100;
+    const jumlah = nan1 + bukanNaN; //NaN
+
+    document.writeln(`<p>${jumlah}</p>`);
+
+    //  isNaN() Function (mengecek apakah NaN atau bukan)
+    document.writeln(`<p>${isNaN(nan1)}</p>`);
+
+    //  Tipe data Array
+    let arrayKosong = [];
+    let arrayNama = ["Akbar", "Abe"];
+
+    const names = [];
+    names.push("Akbar Hidayat");
+    names.push("Hidayat", "abe");
+    names.push("ganteng", "Pinter");
+
+    console.table(names);
+    document.writeln(`<p>${arrayNama}</p>`);
+
+    /*  array.push(value)   -> menambah data ke array
+        array.length        -> mendapatkan panjang array
+        array.index         -> mendapat data di posisi index
+        array[index] = value    -> mengubah data di posisi index
+        delete array[index] -> menghapus data di posisi index, namun
+                               index tidak bergeser
+    */
+    console.info(names[0]);
+    names[0] = "Programmer"
+    console.table(names);
+
+    delete names[1];
+    console.table(names);
+
+    names.push("barabe");
+    console.table(names);
+
+    names[1] = "Ada lagi";
+    names.push(30,69);
+    names.push(["Array", "Di Dalam", "Array"]);
+    console.table(names);
+
+    
+    //  tipeDataObject
+
+    /* Dalam tipe data object index bukan lagi disebu index, tapi
+    disebut attributes atau properties
+    */
+    const person = {};
+
+    person["nama"] =  "Akbarabe";
+    person["alamat"] = "Dago";
+    person["umur"] = 19;
+
+    console.table(person);
+
+    delete person["umur"];
+
+    console.table(person);
+
+    const orang = {
+        "nama lengkap" : "Akbar Hidayat",
+        Alamat : "Dago",
+        umur : 19
+    };
+
+    console.table(orang);
+
+    console.info(`nama : ${orang["nama lengkap"]}`);
+    console.info(`alamat : ${orang.Alamat}`);
+    console.info(`umur : ${orang.umur}`);
+
+
+    //  ifExpression
+    const examValue = 60;
+
+    if(examValue >= 80){
+        document.writeln("<p>Gege kamu banh </p>");
+    }   else if (examValue >= 70){
+        document.writeln("<p>Coba lagi banh </p>");
+    }   else {
+        document.writeln("<p>Yuk bisa yuk </p>");
+    }
+
+    //  popUp
+    alert("Halo User!"); // alert untuk popUp
+
+    const input = prompt("Namanya siapa?"); //untuk inputan user
+    alert(`Hello ${input}`);
+
+    const masuk = confirm("Yakin deck mau masuk?"); //untuk persetujuan
+    if(masuk){
+        const nami = prompt("Siapa namanya?");
+        alert(`Hello ${nami}`);
+    }   else {
+        alert("Dadah");
+    }
+
+    //  undefined
+    let gkJelas;
+    if(gkJelas === undefined){
+        console.info("undefined"); //   pake console.info biar gk kebanyakan popUp
+    }   else {
+        console.info("Defined");
+    }
+
+    const ngaran = ["Abe"];
+
+    if(ngaran[1] === undefined){
+        console.info("Array undefined");
+    }   else {
+        console.info(`Array Defined`);
+    }
+
+    const jalmi = {
+        name : "abe" // kalo mau undefined hapus lagi
+    }
+    if(jalmi.name === undefined){
+        console.info("Object Undefined");
+    }   else {
+        console.info("Object Defined");
+    }
+
+    //   NULL
+
+</script>
+</body>
+</html>
