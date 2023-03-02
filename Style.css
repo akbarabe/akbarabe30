@@ -1,0 +1,21 @@
+body{
+    background-color: bisque;
+}
+
+h3{
+    color: tomato;
+    font-size: 20pt;
+    border: 1px solid black;
+}
+
+/* ini untuk class dia pake titik sebelum namanya */
+
+.pinter{
+    color:grey;
+}
+
+/* ini untuk id dia pake # sebelum namanya */
+
+#ok{
+    color: aquamarine;
+}
